@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none !important;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    margin: 0 auto;
+    background-image: url("../img/colorfulvegie.jpg");
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.benner-text {
+    color: orange;
+    text-align: center;
+}
+
+.benner-text h1 {
+    font-family: "Kaushan Script", cursive;
+    font-size: 130px;
+    padding-bottom: 30px;
+}
+
+.benner-text p {
+    font-size: px;
+    font-family: "Sofia";
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.10);
+}
+
+nav .logo {
+    margin-left: 40px;
+}
+
+nav .logo h3 {
+    font-family: "Kaushan Script", cursive;
+    font-size: 35px;
+    color: orange;
+}
+
+nav .links ul {
+    display: flex;
+    margin-right: 40px;
+}
+
+nav .links ul li {
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.links ul li a {
+    color: black;
+}
+
+.produk {
+    margin: 30px auto;
+}
+
+.title-text {
+    text-align: center;
+}
+
+.title-text h3 {
+    color: orange;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.title-text h1 {
+    font-size: 50px;
+}
+
+.produk-options {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+.produk-card {
+    position: relative;
+}
+
+.produk-options img {
+    display: block;
+    width: 100%;
+}
+
+.produk-options .image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(246, 141, 3, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.image__overlay>* {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+    opacity: 1;
+}
+
+.image__overlay:hover>* {
+    transform: translateY(0);
+}
+
+.produk-card h4 {
+    margin-bottom: 20px;
+}
+
+.produk-card p {
+    text-align: center;
+}
+
+.about {
+    background-image: url(../img/sayuranopac.png);
+    background-size: cover;
+    height: 70vh;
+    margin: 30px auto;
+    background-position: bottom;
+}
+
+
+.about article {
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    margin-top: 40px;
+    text-align: justify;
+    opacity: 1;
+}
+
+
+.kontak {
+    margin: 40px auto;
+}
+
+.kontak .kontak-container {
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.kontak-container .alamat {
+    text-align: right;
+}
+
+.jadwal,
+.alamat {
+    flex: 1;
+    line-height: 35px;
+}
+
+.jadwal .fa,
+.alamat .fa {
+    font-size: 20px;
+    color: orange;
+    margin: 10px;
+}
+
+footer {
+    padding: 40px 0;
+    background-color: orange;
+}
+
+.gridding-footer {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.gridding-footer h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+
+.gridding-footer li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.underline {
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    margin-bottom: 15px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.underline span {
+    border-radius: 10px;
+    display: block;
+    width: 15px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+
+@keyframes moving {
+    0% {
+        left: -10px;
+        box-sizing: border-box;
+    }
+
+    100% {
+        left: 90%;
+
+    }
+}
+
+.follow ul li i {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+}
+
+.follow ul {
+    display: flex;
+}
+
+.company li a:hover,
+.get-help li a:hover,
+.online-shop a:hover {
+    color: white;
+    padding-left: 8px;
+}
+
+.follow ul li i:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+.gridding-footer ul li a {
+    color: black;
+}
